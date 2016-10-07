@@ -1,51 +1,36 @@
-body{
-  background:#eee;
+body {
+  background-color: pink;
 }
 
-h1{
-  text-align:center;
-  margin-bottom:5px;
+#fullSection{
+  margin: 50px auto 0;
+  width: 600px;
 }
 
-p.info{
-  text-align:center;
-  width:400px;
-  margin:0 auto;
-  font-size:12px;
-  font-weight:bold;
-  color:#666;
-  margin-bottom:20px;
+#header{
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+  position: relative;
 }
 
-#game-base{
-  width:640px;
-  margin:0 auto;
-  padding-top:60px;
+#grid{
+  align-content: center;
 }
 
-#game-table{
-  width:434px;
-  height:374px;
-  margin:0 auto;
-  background:url("http://img.sr/images/2014/01/28/base.png") 0 0 no-repeat;
-  position:relative;
+.gameColumn{
+  float:left;
+  display: inline-block;
+  position: relative;
 }
 
-.disc{
-  position:absolute;
-  z-index:-1;
-  top:-55px;
-  left:14px;
-  width:46px;
-  height:46px;
-  border-radius:46px;
-  transition:all .3s;
-}
-
-.disc.red{
-  background:#d96666;
-}
-
-.disc.yellow{
-  background:#ffeb79;
+.slot{
+  /*margin: 2px auto 0;*/
+  background-color: hotpink;
+  height: 75px;
+  width: 75px;
+  border-size:2px;
+  border-style:solid;
+  border-color:black;
 }
