@@ -25,6 +25,20 @@ body {
   position: relative;
 }
 
+.emptySlot{
+  /*margin: 2px auto 0;*/
+  border-radius: 50%;
+  background-color: aliceblue;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+  line-height: 60px;
+  border-size:2px;
+  border-style:solid;
+  border-color:black;
+  cursor: pointer;
+}
+
 .slot{
   /*margin: 2px auto 0;*/
   border-radius: 50%;
@@ -34,4 +48,12 @@ body {
   border-size:2px;
   border-style:solid;
   border-color:black;
+}
+
+.yellowPuck{
+  background-color: yellow;
+}
+
+.redPuck{
+  background-color: red;
 }

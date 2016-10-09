@@ -18,13 +18,61 @@ var board = [[0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0]];
 
+var currentPlayer = 1;
+
   $(document).ready(function() {
-  $('#slot').click(myFunction);
+  $('.emptySlot').click(myFunction);
+
+// takeTurn (3);
+
+// currentPlayer=2;
+
+
+
+// currentPlayer = 1;
+
+// takeTurn(2);
+
+// drawFunction();
+
 });
 
 function myFunction() {
-  alert('hi');
+  //alert($(this).data("col"));
+  takeTurn($(this).data("col"));
+  drawFunction();
 }
+
+function drawFunction () {
+  for(var i = 0; i < 6; i++)
+  {
+    for(var k = 0; k < 7; k++)
+    {
+      if(board[i][k]===1){
+        $(".gameColumn").eq(k).find(".slot").eq(i).addClass("redPuck");
+      } else if (board[i][k]===2) {
+        $(".gameColumn").eq(k).find(".slot").eq(i).addClass("yellowPuck");
+      }
+    }
+  }
+}
+
+function takeTurn(col) {
+  if (col > 6 || board[0][col]!==0) {
+    return false;
+  }
+  for(var i = 5; i >= 0; i--) {
+    if(board[i][col]===0) {
+      if (currentPlayer===1) {
+        currentPlayer = 2;
+      } else {
+        currentPlayer=1;
+      }
+      return board [i][col]=currentPlayer;
+    }
+  }
+}
+
 
 //board[i][j], board[i][j+1], board[i][j+2]...
 //board[i][j], board[i+1][j], board[i+2][j]...
