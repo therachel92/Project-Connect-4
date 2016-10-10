@@ -1,3 +1,4 @@
+"use strict";
 //Variables
 
 var frame = {
@@ -16,8 +17,19 @@ var board = [[0,0,0,0,0,0,0],
 //Start the game with a function calling the empty slot
 var currentPlayer = 1;
 
+      var fname;
+      var lname;
+      var email;
+
   $(document).ready(function() {
-  $('.emptySlot').click(myFunction);
+    $("#firstname").html("ghdfghgf");
+    $("#lastname").html(lname);
+    $(".submit").click(function(){
+      fname = $("#fname").val();
+      lname = $("#lname").val();
+      email = $("#email").val();
+    });
+    $('.emptySlot').click(myFunction);
 
 // takeTurn (3);
 
@@ -31,7 +43,7 @@ var currentPlayer = 1;
 
 // drawFunction();
 
-});
+    });
 
 function myFunction() {
   //alert($(this).data("col"));
@@ -72,6 +84,30 @@ function takeTurn(col) {
   }
 }
 
+// function leftRight(){
+//   for(var i = 0; i < 6; i++){
+//     for(var k =0; k < 7; k--)
+//   }
+
+//   var puckCounter = 0;
+//   var prevValue = 0;
+
+//   for(var y = 0; y < 6; y++) {
+//     for(var x = 0; x < 7; x++) {
+//       console.log(board[0][0]);
+//       if(board[x][y]) { //!== 0 && board[x][y] === prevValue) {
+//         puckCounter++;
+//       } else{
+//         puckCounter=0;
+//       }
+//       prevValue = board[x][y];
+//       if(puckCounter >= 3) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// }
 
 //board[i][j], board[i][j+1], board[i][j+2]...
 //board[i][j], board[i+1][j], board[i+2][j]...
