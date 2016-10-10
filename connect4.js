@@ -3,14 +3,9 @@
 var frame = {
         yellowPiece: "Player 1",
         redPiece: "Player 2",
-        startingPlayer: "red",
-        // takenMsg: "This position is already taken. Please make another choice.",
-        // drawMsg: "This game is a draw.",
-        // playerPrefix: "Current Player is: ",
-        // winPrefix: "The winner is: ",
-        countToWin: 4,
     };
 
+//Create the Board
 var board = [[0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0],
@@ -18,6 +13,7 @@ var board = [[0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0]];
 
+//Start the game with a function calling the empty slot
 var currentPlayer = 1;
 
   $(document).ready(function() {
@@ -43,10 +39,12 @@ function myFunction() {
   drawFunction();
 }
 
+//Check to see if there was a winner
 function drawFunction () {
   for(var i = 0; i < 6; i++)
   {
     for(var k = 0; k < 7; k++)
+//
     {
       if(board[i][k]===1){
         $(".gameColumn").eq(k).find(".slot").eq(i).addClass("redPuck");
@@ -57,6 +55,7 @@ function drawFunction () {
   }
 }
 
+//
 function takeTurn(col) {
   if (col > 6 || board[0][col]!==0) {
     return false;
@@ -104,9 +103,3 @@ function takeTurn(col) {
 //looop back to first move
 
 //continue but alternate the color
-
-
-
-
-
-
